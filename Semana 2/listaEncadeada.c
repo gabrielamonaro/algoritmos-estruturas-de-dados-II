@@ -5,11 +5,10 @@ void inserirElemento(int *vetor, int elemento, int *tamanho) {
     
     if (*tamanho != 0)
     {
-        vetor = realloc(vetor, *tamanho+1);
+        vetor = realloc(vetor, *tamanho+1); //n-1
     }
-    
-    vetor[ *tamanho] = elemento; 
-   *tamanho = *tamanho + 1;
+    vetor[ *tamanho] = elemento; //n
+   *tamanho = *tamanho + 1; //n
 
     return;
 }
@@ -17,7 +16,7 @@ void inserirElemento(int *vetor, int elemento, int *tamanho) {
 void exibirLista(int *vetor, int *tamanho) {
   printf("\n");
   for (int i = 0; i < *tamanho; i++) {
-    printf("%d\n", vetor[i]);
+    printf("%d\n", vetor[i]); //n
   }
 }
 
@@ -67,10 +66,6 @@ int main() {
       printf("Opção inválida. ");
       menu();
     }
-  }
-
-  for (int i = 0; i < tamanho; i++) {
-    scanf("%d", &vet[i]);
   }
 
   return 0;
